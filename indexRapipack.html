@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RapiPack | Próximamente</title>
+    <meta name="description" content="RapiPack - Soluciones logísticas rápidas y eficientes.">
+    <style>
+        /* --- FUENTES Y COLORES --- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+        :root {
+            --brand-black: #000000;
+            --brand-red: #ff3333; /* Ajustado al rojo de tu logo */
+            --bg-color: #ffffff;
+            --text-gray: #666666;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden; /* Evita scroll innecesario */
+        }
+
+        /* --- FONDO DECORATIVO SUTIL --- */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(255, 51, 51, 0.03) 0%, rgba(255,255,255,0) 70%);
+            z-index: -1;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* --- LOGO --- */
+        .logo-img {
+            width: 280px; /* Tamaño ideal para que se vea bien el detalle */
+            height: auto;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05); /* Pequeño zoom al pasar el ratón */
+        }
+
+        /* --- TEXTOS --- */
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin: 0;
+            color: var(--brand-black);
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .dot {
+            color: var(--brand-red); /* El punto final en rojo corporativo */
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-top: 20px;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        /* --- BARRA DE CARGA (EFECTO VISUAL) --- */
+        .loader-container {
+            width: 200px;
+            height: 4px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loader-bar {
+            width: 50%;
+            height: 100%;
+            background-color: var(--brand-red);
+            position: absolute;
+            left: -50%;
+            animation: loading 2s infinite ease-in-out;
+            border-radius: 10px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+
+        /* --- ANIMACIONES --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes loading {
+            0% { left: -50%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+
+        /* --- MOVIL --- */
+        @media (max-width: 600px) {
+            .logo-img { width: 220px; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="rapipack_logo.png" alt="RapiPack Logo" class="logo-img">
+        
+        <h1>Próximamente<span class="dot">.</span></h1>
+        
+        <p>Estamos preparando la nueva experiencia de envíos rápidos.</p>
+
+        <div class="loader-container">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 RapiPack Inc.
+    </footer>
+
+</body>
+</html>
